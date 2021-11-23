@@ -1,0 +1,86 @@
+<div class="box-body table-responsive">
+    <h4>Report Monitoring Kelolaan NPL AO PPK</h4>
+  
+    <table class="a">
+      <?php if (!empty($p_segmen)): ?>
+        <tr>
+          <td width="150px">Segmen</td>
+          <td>:</td>
+          <td><?= $p_segmen ?></td>
+        </tr>
+      <?php endif ?>
+      <?php if (!empty($p_cabang)): ?>
+        <tr>
+          <td width="150px">Cabang</td>
+          <td>:</td>
+          <td><?= $p_cabang ?></td>
+        </tr>
+      <?php endif ?>
+      <?php if (!empty($p_kanwil)): ?>
+        <tr>
+          <td width="150px">Kanwil</td>
+          <td>:</td>
+          <td><?= $p_kanwil ?></td>
+        </tr>
+      <?php endif ?>
+      <?php if (!empty($nama_ao)): ?>
+        <tr>
+          <td width="150px">AO</td>
+          <td>:</td>
+          <td><?= $nama_ao ?></td>
+        </tr>
+      <?php endif ?>
+      <?php if (!empty($nama_kol)): ?>
+        <tr>
+          <td width="150px">Kolektibilitas</td>
+          <td>:</td>
+          <td><?= $nama_kol ?></td>
+        </tr>
+      <?php endif ?>
+        
+    </table>
+
+  <table border="1" id="potensi" width="100%">
+    <thead style="background-color: #e3e3fb">
+    	<tr>
+    		<th>No</th>
+    		<th>Kanwil</th>
+    		<th>Cabang</th>
+    		<th>Kantor</th>
+    		<th>Kolektibilitas</th>
+    		<th>Segmen</th>
+    		<th>Deal Type</th>
+    		<th>Deal Refference</th>
+    		<th>Nama Debitur</th>
+    		<th>Outstanding</th>
+    		<th>Nama AO PPK</th>
+    	</tr>
+    </thead>
+    <tbody>
+      <?php if (!empty($report_detail->result_array()) ): ?>
+
+        <?php $no=1; foreach ($report_detail->result_array() as $r): ?>
+          <tr>
+            <td><?= $no++ ?></td>
+            <td><?= $r['kanwil'] ?></td>
+            <td><?= $r['cabang_induk'] ?></td>
+            <td><?= $r['kantor'] ?></td>
+            <td><?= $r['kolektibilitas'] ?></td>
+            <td><?= $r['segmen'] ?></td>
+            <td><?= $r['loan_type'] ?></td>
+            <td><?= $r['deal_reff'] ?></td>
+            <td><?= $r['nama'] ?></td>
+            <td><?= number_format($r['ot'], 0, '.', '.') ?></td>
+            <td><?= $r['name'] ?></td>
+          </tr>
+        <?php endforeach ?>
+
+      <?php else: ?>
+          <tr>
+            <td colspan="11" align="center">Data Tidak Ada</td>
+          </tr>
+      <?php endif ?>
+    	
+    </tbody>
+  </table>
+</div>

@@ -1,0 +1,49 @@
+18-12-2020
+
+WEB ADMIN
+
+Buka App: Remote Desktop Connection
+IP Server: 192.168.226.111
+pass: P@ssw0rd
+
+1. instalasi xampp
+2. setting sql server 
+3. file sql_srv.dll sql server ke xampp->php->ext
+4. file web app: pada htdocs->bjb
+
+========
+
+API
+
+IP Server: 192.168.226.110
+
+1. instalasi xampp
+2. setting sql server 
+3. file sql_srv.dll sql server ke xampp->php->ext
+4. file api: pada htdocs->api_bjb
+
+=======
+
+Integrasi login uim
+1. API CI + Ambil encryp aes 256 (API Laravel) --> UIM
+
+=======
+
+Pendaftaran idfungsi untuk User level back-end 
+1. Dilakukan tim IT (Pak Reza) 
+
+=======
+
+master data
+1. Menunggu master data unit kerja dari Pak Bintang
+2. Menunggu data user dari Pak Bintang
+
+=======
+
+Input update data
+1. Untuk pengisian di tabel reg employee
+2. nip -> reg_employee
+3. nama -> name 
+4. hp 
+5. email
+

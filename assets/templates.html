@@ -1,0 +1,109 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Java Web Media Login Page</title>
+<link href="images/logo-javawebmedia.png" rel="shortcut icon">
+<link href="css/style.css" rel="stylesheet">
+<!-- Jquery -->
+<link href="jquery/jquery-ui.css" rel="stylesheet">
+</head>
+
+<body>
+<section class="container">
+	<header>Hai <a href="#" title="Update profil">Nama</a> | <a href="#" title="Logout">Logout</a></header>
+    <nav>
+    	<ul>
+        	<li><a href="#">Dasbor</a></li>
+            <li><a href="#">User</a></li>
+            <li><a href="#">Tambah User</a></li>
+            <li><a href="templates.html">Templates</a></li>
+        </ul>
+    </nav>
+    <article>
+      <h1>Manajemen User</h1>
+      <form name="form1" method="post" action="">
+        <p>
+          <label for="nama">Nama lengkap</label>
+          <input type="text" name="nama" id="nama" placeholder="Nama lengkap">
+        </p>
+        <p>
+          <label for="tanggal_lahir">Tanggal lahir</label>
+          <input type="text" name="tanggal_lahir" id="tanggal_lahir" placeholder="YYYY-MM-DD">
+        </p>
+        <p>
+          <label for="email">Email</label>
+          <input type="text" name="email" id="email" placeholder="Email">
+        </p>
+        <p>
+          <label for="username">Username</label>
+          <input type="text" name="username" id="username" placeholder="Username">
+        </p>
+        <p>
+          <label for="password">Password</label>
+          <input type="text" name="password" id="password" placeholder="Password">
+        </p>
+        <p>
+          <input name="submit" type="submit" class="full" id="submit" value="Simpan User">
+        </p>
+      </form>
+      <h1>Tampilan Tabel</h1>
+      <table width="100%" border="0" cellspacing="0" cellpadding="0">
+        <tr>
+          <th scope="col">Nama</th>
+          <th scope="col">Email</th>
+          <th scope="col">Username</th>
+          <th scope="col">&nbsp;</th>
+        </tr>
+        <tr>
+          <td>Andoyo</td>
+          <td>andoyo@javawebmedia.com</td>
+          <td>andoyo</td>
+          <td><a href="#">Edit</a> | <a href="#">Delete</a></td>
+        </tr>
+        <tr>
+          <td>Rayyan</td>
+          <td>rayyan@javawebmedia.com</td>
+          <td>rayyan</td>
+          <td><a href="#">Edit</a> | <a href="#">Delete</a></td>
+        </tr>
+        <tr>
+          <th scope="col">Nama</th>
+          <th scope="col">Email</th>
+          <th scope="col">Username</th>
+          <th scope="col">&nbsp;</th>
+        </tr>
+      </table>
+      <!-- Pagination -->
+      <div class="pagination">
+      	<a href="#"> << </a>
+        <a href="#"> 1 </a>
+        <a href="#"> 2 </a>
+        <a href="#"> 3 </a>
+        <a href="#"> 4 </a>
+        <a href="#"> 5 </a>
+        <a href="#"> >> </a>
+      </div>
+      <h1>Pesan notifikasi</h1>
+      <p class="warning">Ini pesan error</p>
+      <p class="sukses">Ini pesan sukses</p>
+    </article>
+    <!-- Footer Area -->
+    <script src="jquery/external/jquery/jquery.js"></script>
+	<script src="jquery/jquery-ui.js"></script>
+    <!-- Utk datepicker -->
+	<script type="text/javascript">
+    $( "#tanggal_lahir" ).datepicker({
+        inline: true,
+        dateFormat: "yy-mm-dd",
+        changeYear: true,
+        changeMonth: true,
+        numberOfMonths: 1
+    });
+    </script>
+    
+    <div class="clearfix"></div>
+    <footer>Web design by <a href="http://javawebmedia.com" title="School of graphic &amp; web design" target="_blank">Java Web Media</a></footer>
+</section>
+</body>
+</html>
